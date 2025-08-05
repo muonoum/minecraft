@@ -1,0 +1,15 @@
+[Unit]
+After=network.target
+
+[Service]
+User=minecraft
+ExecStart=/opt/minecraft/bin/start.sh
+ExecStop=bash -c 'echo save-all > %t/minecraft.stdin'
+ExecStop=bash -c 'echo stop > %t/minecraft.stdin'
+WorkingDirectory=/opt/minecraft
+ReadWritePaths=/opt/minecraft
+KillSignal=SIGCONT
+TimeoutSec=30
+
+[Install]
+WantedBy=multi-user.target
