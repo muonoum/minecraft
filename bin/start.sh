@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-exec /opt/minecraft/bin/start-zgc.sh
+exec /opt/minecraft/shared/bin/start-zgc.sh

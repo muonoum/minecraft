@@ -1,3 +1,0 @@
-[Service]
-Type=oneshot
-ExecStart=find /opt/minecraft/logs/ -name '*.gz' -mtime +30 -type f -delete -print

@@ -1,0 +1,3 @@
+[Service]
+Type=oneshot
+ExecStart=find /opt/minecraft/ -name '*.gz' -not -path '*/shared/*' -mtime +30 -type f -delete -print

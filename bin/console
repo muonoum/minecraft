@@ -1,0 +1,4 @@
+#!/bin/sh
+# https://github.com/muonoum/mcon
+/opt/minecraft/shared/bin/mcon --stdin /run/minecraft@$1.stdin -- \
+journalctl --no-hostname --output short-full --follow --unit minecraft@$1.service --lines 250
